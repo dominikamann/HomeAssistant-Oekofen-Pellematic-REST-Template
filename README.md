@@ -14,5 +14,6 @@ Naming:                       JSON-Identifier
   - BufferTank                pu[x] -> e.g. pu1
   - HotWaterCircuit           ww[x] -> e.g. ww1
   - PellematicHeater          pe[x] -> e.g. pe1
+  - System                    system
 
 Feel free to extend the template and add meaningfull identifiers. Iam happy if you contribute.
