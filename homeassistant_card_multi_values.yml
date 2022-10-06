@@ -1,0 +1,108 @@
+type: entities
+title: 'Pellematic '
+entities:
+  - entity: sensor.pelletheater
+    secondary_info: last-updated
+    name: Außentemperatur
+    type: custom:multiple-entity-row
+    entities:
+      - entity: sensor.pelletheatersystemtemperatureoutside
+        name: false
+        icon: false
+  - entity: sensor.pelletheater
+    secondary_info: last-updated
+    name: Pellematic Compact (Max, Aktuell, Zwischenbehälter, Vebraucht Heute/Gestern)
+    type: custom:multiple-entity-row
+    entities:
+      - entity: sensor.pellematicheaterstoragefillmax
+        name: false
+        icon: false
+      - entity: sensor.pellematicheaterstoragefill
+        name: false
+        icon: false
+      - entity: sensor.pellematicheaterstoragepopper
+        name: false
+        icon: false
+      - entity: sensor.pellematicheaterstoragefilltoday
+        name: false
+        icon: false
+      - entity: sensor.pellematicheaterstoragefillyesterday
+        name: false
+        icon: false
+  - entity: sensor.pelletheater
+    secondary_info: last-updated
+    name: Pellematic Compact (Kessel/Soll, Flammraum/Soll)
+    type: custom:multiple-entity-row
+    entities:
+      - entity: sensor.pellematicheatertemp
+        name: false
+        icon: false
+      - entity: sensor.pellematicheatertempsoll
+        name: false
+        icon: false
+      - entity: sensor.pellematicheatertempflammraum
+        name: false
+        icon: false
+      - entity: sensor.pellematicheatertempflammraumsoll
+        name: false
+        icon: false
+  - entity: sensor.pelletheater
+    secondary_info: last-updated
+    name: Warmwasser (Temp-Ein, Temp-Aus, Soll, Pumpe)
+    type: custom:multiple-entity-row
+    entities:
+      - entity: sensor.pelletheaterhotwatercircuitontemperature
+        name: false
+        icon: false
+      - entity: sensor.pelletheaterhotwatercircuitofftemperature
+        name: false
+        icon: false
+      - entity: sensor.pelletheaterhotwatercircuitontemperaturesoll
+        name: false
+        icon: false
+      - entity: sensor.pelletheaterhotwatercircuitpumpon
+        name: false
+        icon: false
+  - entity: sensor.pelletheater
+    secondary_info: last-updated
+    name: Puffertank (Oben/Soll, Mitte/Soll, Pumpe)
+    type: custom:multiple-entity-row
+    entities:
+      - entity: sensor.pelletheaterbuffertanktemperatureo
+        name: false
+        icon: false
+      - entity: sensor.pelletheaterbuffertanktemperatureosoll
+        name: false
+        icon: false
+      - entity: sensor.pelletheaterbuffertanktemperatureu
+        name: false
+        icon: false
+      - entity: sensor.pelletheaterbuffertanktemperatureusoll
+        name: false
+        icon: false
+      - entity: sensor.pelletheaterbuffertankpumpon
+        name: false
+        icon: false
+  - entity: sensor.pelletheater
+    secondary_info: last-updated
+    name: Heizkreislauf (Vorlauftemperatur/Soll, Pumpe)
+    type: custom:multiple-entity-row
+    entities:
+      - entity: sensor.pelletheaterheatingcircuitflowtemperature
+        name: false
+        icon: false
+      - entity: sensor.pelletheaterheatingcircuitflowtemperaturesoll
+        name: false
+        icon: false
+      - entity: sensor.pelletheaterheatingcircuitpumpon
+        name: false
+        icon: false
+  - entity: sensor.pellematicheaterstatus
+    name: Pellematic Compact Status
+  - entity: sensor.pelletheaterbuffertankstate
+    name: Puffertank Status
+  - entity: sensor.pelletheaterhotwatercircuitstate
+    name: Warmwasser Status
+  - entity: sensor.pelletheaterheatingcircuitstate
+    name: Heizkreislauf Status
+    type: custom:multiple-entity-row
