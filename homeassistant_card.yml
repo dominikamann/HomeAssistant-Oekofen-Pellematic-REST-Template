@@ -1,0 +1,28 @@
+type: entities
+title: 'Pellematic '
+entities:
+  - entity: sensor.pelletheaterheatingcircuitflowtemperature
+  - entity: sensor.pelletheaterheatingcircuitflowtemperaturesoll
+  - entity: sensor.pelletheaterheatingcircuitstate
+  - entity: sensor.pelletheaterheatingcircuitpumpon
+  - entity: sensor.pelletheaterbuffertanktemperatureo
+  - entity: sensor.pelletheaterbuffertanktemperatureosoll
+  - entity: sensor.pelletheaterbuffertanktemperatureu
+  - entity: sensor.pelletheaterbuffertanktemperatureusoll
+  - entity: sensor.pelletheaterbuffertankstate
+  - entity: sensor.pelletheaterbuffertankpumpon
+  - entity: sensor.pelletheaterhotwatercircuitontemperaturesoll
+  - entity: sensor.pelletheaterhotwatercircuitontemperature
+  - entity: sensor.pelletheaterhotwatercircuitofftemperature
+  - entity: sensor.pelletheaterhotwatercircuitstate
+  - entity: sensor.pelletheaterhotwatercircuitpumpon
+  - entity: sensor.pellematicheatertemp
+  - entity: sensor.pellematicheatertempsoll
+  - entity: sensor.pellematicheatertempflammraum
+  - entity: sensor.pellematicheatertempflammraumsoll
+  - entity: sensor.pellematicheaterstatus
+  - entity: sensor.pellematicheaterstoragefill
+  - entity: sensor.pellematicheaterstoragefillmax
+  - entity: sensor.pellematicheaterstoragepopper
+  - entity: sensor.pellematicheaterstoragefilltoday
+  - entity: sensor.pellematicheaterstoragefillyesterday
