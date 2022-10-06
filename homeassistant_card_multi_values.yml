@@ -1,17 +1,11 @@
 type: entities
 title: 'Pellematic '
 entities:
-  - entity: sensor.pelletheater
+  - entity: sensor.pelletheatericonbase
     secondary_info: last-updated
-    name: Außentemperatur
-    type: custom:multiple-entity-row
-    entities:
-      - entity: sensor.pelletheatersystemtemperatureoutside
-        name: false
-        icon: false
-  - entity: sensor.pelletheater
-    secondary_info: last-updated
-    name: Pellematic Compact (Max, Aktuell, Zwischenbehälter, Vebraucht Heute/Gestern)
+    name: >-
+      Pellematic Compact (Max, Aktuell, Zwischenbehälter, Vebraucht
+      Heute/Gestern)
     type: custom:multiple-entity-row
     entities:
       - entity: sensor.pellematicheaterstoragefillmax
@@ -29,7 +23,7 @@ entities:
       - entity: sensor.pellematicheaterstoragefillyesterday
         name: false
         icon: false
-  - entity: sensor.pelletheater
+  - entity: sensor.pelletheatericonbase
     secondary_info: last-updated
     name: Pellematic Compact (Kessel/Soll, Flammraum/Soll)
     type: custom:multiple-entity-row
@@ -46,7 +40,7 @@ entities:
       - entity: sensor.pellematicheatertempflammraumsoll
         name: false
         icon: false
-  - entity: sensor.pelletheater
+  - entity: sensor.pelletheatericonbase
     secondary_info: last-updated
     name: Warmwasser (Temp-Ein, Temp-Aus, Soll, Pumpe)
     type: custom:multiple-entity-row
@@ -63,7 +57,7 @@ entities:
       - entity: sensor.pelletheaterhotwatercircuitpumpon
         name: false
         icon: false
-  - entity: sensor.pelletheater
+  - entity: sensor.pelletheatericonbase
     secondary_info: last-updated
     name: Puffertank (Oben/Soll, Mitte/Soll, Pumpe)
     type: custom:multiple-entity-row
@@ -83,7 +77,7 @@ entities:
       - entity: sensor.pelletheaterbuffertankpumpon
         name: false
         icon: false
-  - entity: sensor.pelletheater
+  - entity: sensor.pelletheatericonbase
     secondary_info: last-updated
     name: Heizkreislauf (Vorlauftemperatur/Soll, Pumpe)
     type: custom:multiple-entity-row
@@ -95,6 +89,14 @@ entities:
         name: false
         icon: false
       - entity: sensor.pelletheaterheatingcircuitpumpon
+        name: false
+        icon: false
+  - entity: sensor.pelletheatericonbase
+    secondary_info: last-updated
+    name: Außentemperatur
+    type: custom:multiple-entity-row
+    entities:
+      - entity: sensor.pelletheatersystemtemperatureoutside
         name: false
         icon: false
   - entity: sensor.pellematicheaterstatus
