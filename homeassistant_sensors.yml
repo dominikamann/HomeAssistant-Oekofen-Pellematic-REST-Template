@@ -86,15 +86,20 @@
       pellematicheaterstoragefill:
         value_template: "{{ state_attr('sensor.PelletHeater', 'pe1')['L_storage_fill'] | int }}"
         entity_id: sensor.PelletHeater_pellematicheaterstoragefill
+        unit_of_measurement: "kg"
       pellematicheaterstoragefillmax:
         value_template: "{{ state_attr('sensor.PelletHeater', 'pe1')['L_storage_max'] | int }}"
         entity_id: sensor.PelletHeater_pellematicheaterstoragefillmax
+        unit_of_measurement: "kg"
       pellematicheaterstoragepopper:
         value_template: "{{ state_attr('sensor.PelletHeater', 'pe1')['L_storage_popper'] | int }}"
         entity_id: sensor.PelletHeater_pellematicheaterstoragepopper
+        unit_of_measurement: "kg"
       pellematicheaterstoragefilltoday:
         value_template: "{{ state_attr('sensor.PelletHeater', 'pe1')['storage_fill_today'] | int }}"
-        entity_id: sensor.PelletHeater_pellematicheaterstoragefilltoday		
+        entity_id: sensor.PelletHeater_pellematicheaterstoragefilltoday	
+        unit_of_measurement: "kg"
       pellematicheaterstoragefillyesterday:
         value_template: "{{ state_attr('sensor.PelletHeater', 'pe1')['storage_fill_yesterday'] | int }}"
         entity_id: sensor.PelletHeater_pellematicheaterstoragefillyesterday
+        unit_of_measurement: "kg"
