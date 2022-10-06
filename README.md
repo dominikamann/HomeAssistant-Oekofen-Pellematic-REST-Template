@@ -16,4 +16,6 @@ Naming:                       JSON-Identifier
   - PellematicHeater          pe[x] -> e.g. pe1
   - System                    system
 
-Feel free to extend the template and add meaningfull identifiers. Iam happy if you contribute.
+![grafik](https://user-images.githubusercontent.com/29973737/194421559-d1842fad-5209-4be3-bc7d-591227b2ee68.png)
+
+Feel free to share, change, extend & contribute.
