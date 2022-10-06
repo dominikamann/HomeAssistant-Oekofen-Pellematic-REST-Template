@@ -1,5 +1,5 @@
 type: entities
-title: 'Pellematic '
+title: Pellematic Compact
 entities:
   - entity: sensor.pelletheatericonbase
     secondary_info: last-updated
@@ -101,10 +101,14 @@ entities:
         icon: false
   - entity: sensor.pellematicheaterstatus
     name: Pellematic Compact Status
+    secondary_info: last-updated
   - entity: sensor.pelletheaterbuffertankstate
     name: Puffertank Status
+    secondary_info: last-updated
   - entity: sensor.pelletheaterhotwatercircuitstate
     name: Warmwasser Status
+    secondary_info: last-updated
   - entity: sensor.pelletheaterheatingcircuitstate
     name: Heizkreislauf Status
+    secondary_info: last-updated
     type: custom:multiple-entity-row
