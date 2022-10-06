@@ -1,0 +1,100 @@
+  - platform: rest
+    name: PelletHeater
+    resource: http://YOUR_IP_ADRESS:4321/YOUR_PASSWORD/all
+    scan_interval: 60
+    json_attributes:
+      - hk1
+      - pu1
+      - ww1
+      - pe1
+    value_template: "OK"
+  - platform: template
+    sensors:
+      pelletheaterheatingcircuitflowtemperature:
+        value_template: "{{ state_attr('sensor.PelletHeater', 'hk1')['L_flowtemp_act'] | int / 10}}"
+        unit_of_measurement: "°C"
+        entity_id: sensor.PelletHeater_heatingcircuitflowtemperature
+      pelletheaterheatingcircuitflowtemperaturesoll:
+        value_template: "{{ state_attr('sensor.PelletHeater', 'hk1')['L_flowtemp_set'] | int / 10}}"
+        unit_of_measurement: "°C"
+        entity_id: sensor.PelletHeater_heatingcircuitflowtemperaturesoll
+      pelletheaterheatingcircuitstate:
+        value_template: "{{ state_attr('sensor.PelletHeater', 'hk1')['L_statetext']}}"
+        entity_id: sensor.PelletHeater_heatingcircuitstate
+      pelletheaterheatingcircuitpumpon:
+        value_template: "{{ state_attr('sensor.PelletHeater', 'hk1')['L_pump'] | int }}"
+        entity_id: sensor.PelletHeater_pelletheaterheatingcircuitpumpon
+      pelletheaterbuffertanktemperatureo:
+        value_template: "{{ state_attr('sensor.PelletHeater', 'pu1')['L_tpo_act'] | int / 10}}"
+        unit_of_measurement: "°C"
+        entity_id: sensor.PelletHeater_pelletheaterbuffertanktemperatureo
+      pelletheaterbuffertanktemperatureosoll:
+        value_template: "{{ state_attr('sensor.PelletHeater', 'pu1')['L_tpo_set'] | int / 10}}"
+        unit_of_measurement: "°C"
+        entity_id: sensor.PelletHeater_pelletheaterbuffertanktemperatureosoll
+      pelletheaterbuffertanktemperatureu:
+        value_template: "{{ state_attr('sensor.PelletHeater', 'pu1')['L_tpm_act'] | int / 10}}"
+        unit_of_measurement: "°C"
+        entity_id: sensor.PelletHeater_pelletheaterbuffertanktemperatureu
+      pelletheaterbuffertanktemperatureusoll:
+        value_template: "{{ state_attr('sensor.PelletHeater', 'pu1')['L_tpm_set'] | int / 10}}"
+        unit_of_measurement: "°C"
+        entity_id: sensor.PelletHeater_pelletheaterbuffertanktemperatureusoll
+      pelletheaterbuffertankstate:
+        value_template: "{{ state_attr('sensor.PelletHeater', 'pu1')['L_statetext']}}"
+        entity_id: sensor.PelletHeater_pelletheaterbuffertankstate
+      pelletheaterbuffertankpumpon:
+        value_template: "{{ state_attr('sensor.PelletHeater', 'pu1')['L_pump' | int ]}}"
+        entity_id: sensor.PelletHeater_pelletheaterbuffertankpumpon
+      pelletheaterhotwatercircuitontemperaturesoll:
+        value_template: "{{ state_attr('sensor.PelletHeater', 'ww1')['L_temp_set'] | int / 10}}"
+        unit_of_measurement: "°C"
+        entity_id: sensor.PelletHeater_pelletheaterhotwatercircuitontemperaturesoll
+      pelletheaterhotwatercircuitontemperature:
+        value_template: "{{ state_attr('sensor.PelletHeater', 'ww1')['L_ontemp_act'] | int / 10}}"
+        unit_of_measurement: "°C"
+        entity_id: sensor.PelletHeater_pelletheaterhotwatercircuitontemperature
+      pelletheaterhotwatercircuitofftemperature:
+        value_template: "{{ state_attr('sensor.PelletHeater', 'ww1')['L_offtemp_act'] | int / 10}}"
+        unit_of_measurement: "°C"
+        entity_id: sensor.PelletHeater_pelletheaterhotwatercircuitofftemperature
+      pelletheaterhotwatercircuitstate:
+        value_template: "{{ state_attr('sensor.PelletHeater', 'ww1')['L_statetext']}}"
+        entity_id: sensor.PelletHeater_pelletheaterhotwatercircuitstate
+      pelletheaterhotwatercircuitpumpon:
+        value_template: "{{ state_attr('sensor.PelletHeater', 'ww1')['L_pump'] | int }}"
+        entity_id: sensor.PelletHeater_pelletheaterhotwatercircuitpumpon	
+      pellematicheatertemp:
+        value_template: "{{ state_attr('sensor.PelletHeater', 'pe1')['L_temp_act'] | int / 10}}"
+        unit_of_measurement: "°C"
+        entity_id: sensor.PelletHeater_pellematicheatertemp
+      pellematicheatertempsoll:
+        value_template: "{{ state_attr('sensor.PelletHeater', 'pe1')['L_temp_act'] | int / 10}}"
+        unit_of_measurement: "°C"
+        entity_id: sensor.PelletHeater_pellematicheatertempsoll
+      pellematicheatertempflammraum:
+        value_template: "{{ state_attr('sensor.PelletHeater', 'pe1')['L_frt_temp_act'] | int / 10}}"
+        unit_of_measurement: "°C"
+        entity_id: sensor.PelletHeater_pellematicheatertempflammraum
+      pellematicheatertempflammraumsoll:
+        value_template: "{{ state_attr('sensor.PelletHeater', 'pe1')['L_frt_temp_set'] | int / 10}}"
+        unit_of_measurement: "°C"
+        entity_id: sensor.PelletHeater_pellematicheatertempflammraumsoll
+      pellematicheaterstatus:
+        value_template: "{{ state_attr('sensor.PelletHeater', 'pe1')['L_statetext']}}"
+        entity_id: sensor.PelletHeater_pellematicheaterstatus	
+      pellematicheaterstoragefill:
+        value_template: "{{ state_attr('sensor.PelletHeater', 'pe1')['L_storage_fill'] | int }}"
+        entity_id: sensor.PelletHeater_pellematicheaterstoragefill
+      pellematicheaterstoragefillmax:
+        value_template: "{{ state_attr('sensor.PelletHeater', 'pe1')['L_storage_max'] | int }}"
+        entity_id: sensor.PelletHeater_pellematicheaterstoragefillmax
+      pellematicheaterstoragepopper:
+        value_template: "{{ state_attr('sensor.PelletHeater', 'pe1')['L_storage_popper'] | int }}"
+        entity_id: sensor.PelletHeater_pellematicheaterstoragepopper
+      pellematicheaterstoragefilltoday:
+        value_template: "{{ state_attr('sensor.PelletHeater', 'pe1')['storage_fill_today'] | int }}"
+        entity_id: sensor.PelletHeater_pellematicheaterstoragefilltoday		
+      pellematicheaterstoragefillyesterday:
+        value_template: "{{ state_attr('sensor.PelletHeater', 'pe1')['storage_fill_yesterday'] | int }}"
+        entity_id: sensor.PelletHeater_pellematicheaterstoragefillyesterday
