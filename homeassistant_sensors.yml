@@ -11,8 +11,12 @@
     value_template: ""
   - platform: template
     sensors:
+      pelletheatericonbase:
+        value_template: ""
+        icon_template: mdi:water-boiler
+        entity_id: sensor.PelletHeater_pelletheatericonbase
       pelletheatersystemtemperatureoutside:
-        value_template: "{{ state_attr('sensor.PelletHeater', 'hk1')['L_ambient'] | int / 10}}"
+        value_template: "{{ state_attr('sensor.PelletHeater', 'system')['L_ambient'] | int / 10}}"
         unit_of_measurement: "°C"
         entity_id: sensor.PelletHeater_pelletheatersystemtemperatureoutside
       pelletheaterheatingcircuitflowtemperature:
@@ -26,6 +30,7 @@
       pelletheaterheatingcircuitstate:
         value_template: "{{ state_attr('sensor.PelletHeater', 'hk1')['L_statetext']}}"
         entity_id: sensor.PelletHeater_heatingcircuitstate
+        icon_template: mdi:water-boiler
       pelletheaterheatingcircuitpumpon:
         value_template: "{{ state_attr('sensor.PelletHeater', 'hk1')['L_pump'] | int }}"
         entity_id: sensor.PelletHeater_pelletheaterheatingcircuitpumpon
@@ -48,6 +53,7 @@
       pelletheaterbuffertankstate:
         value_template: "{{ state_attr('sensor.PelletHeater', 'pu1')['L_statetext']}}"
         entity_id: sensor.PelletHeater_pelletheaterbuffertankstate
+        icon_template: mdi:water-boiler
       pelletheaterbuffertankpumpon:
         value_template: "{{ state_attr('sensor.PelletHeater', 'pu1')['L_pump'] | int }}"
         entity_id: sensor.PelletHeater_pelletheaterbuffertankpumpon
@@ -66,6 +72,7 @@
       pelletheaterhotwatercircuitstate:
         value_template: "{{ state_attr('sensor.PelletHeater', 'ww1')['L_statetext']}}"
         entity_id: sensor.PelletHeater_pelletheaterhotwatercircuitstate
+        icon_template: mdi:water-boiler
       pelletheaterhotwatercircuitpumpon:
         value_template: "{{ state_attr('sensor.PelletHeater', 'ww1')['L_pump'] | int }}"
         entity_id: sensor.PelletHeater_pelletheaterhotwatercircuitpumpon	
@@ -87,7 +94,8 @@
         entity_id: sensor.PelletHeater_pellematicheatertempflammraumsoll
       pellematicheaterstatus:
         value_template: "{{ state_attr('sensor.PelletHeater', 'pe1')['L_statetext']}}"
-        entity_id: sensor.PelletHeater_pellematicheaterstatus	
+        entity_id: sensor.PelletHeater_pellematicheaterstatus
+        icon_template: mdi:water-boiler
       pellematicheaterstoragefill:
         value_template: "{{ state_attr('sensor.PelletHeater', 'pe1')['L_storage_fill'] | int }}"
         entity_id: sensor.PelletHeater_pellematicheaterstoragefill
