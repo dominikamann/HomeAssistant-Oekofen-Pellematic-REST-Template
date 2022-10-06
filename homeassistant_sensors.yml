@@ -44,7 +44,7 @@
         value_template: "{{ state_attr('sensor.PelletHeater', 'pu1')['L_statetext']}}"
         entity_id: sensor.PelletHeater_pelletheaterbuffertankstate
       pelletheaterbuffertankpumpon:
-        value_template: "{{ state_attr('sensor.PelletHeater', 'pu1')['L_pump' | int ]}}"
+        value_template: "{{ state_attr('sensor.PelletHeater', 'pu1')['L_pump'] | int }}"
         entity_id: sensor.PelletHeater_pelletheaterbuffertankpumpon
       pelletheaterhotwatercircuitontemperaturesoll:
         value_template: "{{ state_attr('sensor.PelletHeater', 'ww1')['L_temp_set'] | int / 10}}"
