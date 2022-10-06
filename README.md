@@ -6,7 +6,7 @@ Step 1: Go to your Ökofen Pellematic Compact -> Touchscreen -> Open General Set
 Step 2: Copy the template and enter your IP-Address (Pellematic), Port & Password
 Step 3: Go to HomeAssistant, open your configuration.yml and insert the template
 Step 4: Restart HomeAssistant
-Step 5: Go to your dashbard, add a new card and insert code from homeassistant_card.yml
+Step 5: Go to your dashbard, add a new card and insert code from homeassistant_card_multivalue.yml
 Step 6: After saving the file all sensor values are visible in your dashboard  
 
 Naming:                       JSON-Identifier
