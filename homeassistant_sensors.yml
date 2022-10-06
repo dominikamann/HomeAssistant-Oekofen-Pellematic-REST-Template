@@ -7,9 +7,14 @@
       - pu1
       - ww1
       - pe1
+      - system
     value_template: ""
   - platform: template
     sensors:
+      pelletheatersystemtemperatureoutside:
+        value_template: "{{ state_attr('sensor.PelletHeater', 'hk1')['L_ambient'] | int / 10}}"
+        unit_of_measurement: "°C"
+        entity_id: sensor.PelletHeater_pelletheatersystemtemperatureoutside
       pelletheaterheatingcircuitflowtemperature:
         value_template: "{{ state_attr('sensor.PelletHeater', 'hk1')['L_flowtemp_act'] | int / 10}}"
         unit_of_measurement: "°C"
@@ -69,7 +74,7 @@
         unit_of_measurement: "°C"
         entity_id: sensor.PelletHeater_pellematicheatertemp
       pellematicheatertempsoll:
-        value_template: "{{ state_attr('sensor.PelletHeater', 'pe1')['L_temp_act'] | int / 10}}"
+        value_template: "{{ state_attr('sensor.PelletHeater', 'pe1')['L_temp_set'] | int / 10}}"
         unit_of_measurement: "°C"
         entity_id: sensor.PelletHeater_pellematicheatertempsoll
       pellematicheatertempflammraum:
