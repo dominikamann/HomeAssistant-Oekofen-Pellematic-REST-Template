@@ -90,10 +90,6 @@ entities:
     secondary_info: last-updated
     name: Außentemperatur
     type: custom:multiple-entity-row
-    entities:
-      - entity: sensor.pelletheatersystemtemperatureoutside
-        name: false
-        icon: false
   - entity: sensor.pellematicheaterstatus
     name: Pellematic Compact Status
     secondary_info: last-updated
