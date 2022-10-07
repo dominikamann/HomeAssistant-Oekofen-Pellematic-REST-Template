@@ -2,7 +2,6 @@ type: entities
 title: Pellematic Compact
 entities:
   - entity: sensor.pelletheatericonbase
-    secondary_info: last-updated
     name: >-
       Pellematic Compact (Max, Aktuell, Zwischenbehälter, Vebraucht
       Heute/Gestern)
@@ -24,7 +23,6 @@ entities:
         name: false
         icon: false
   - entity: sensor.pelletheatericonbase
-    secondary_info: last-updated
     name: Pellematic Compact (Kessel/Soll, Flammraum/Soll)
     type: custom:multiple-entity-row
     entities:
@@ -41,7 +39,6 @@ entities:
         name: false
         icon: false
   - entity: sensor.pelletheatericonbase
-    secondary_info: last-updated
     name: Warmwasser (Temp-Ein, Temp-Aus, Soll, Pumpe)
     type: custom:multiple-entity-row
     entities:
@@ -58,7 +55,6 @@ entities:
         name: false
         icon: false
   - entity: sensor.pelletheatericonbase
-    secondary_info: last-updated
     name: Puffertank (Oben/Soll, Mitte/Soll, Pumpe)
     type: custom:multiple-entity-row
     entities:
@@ -78,7 +74,6 @@ entities:
         name: false
         icon: false
   - entity: sensor.pelletheatericonbase
-    secondary_info: last-updated
     name: Heizkreislauf (Vorlauftemperatur/Soll, Pumpe)
     type: custom:multiple-entity-row
     entities:
@@ -91,7 +86,7 @@ entities:
       - entity: sensor.pelletheaterheatingcircuitpumpon
         name: false
         icon: false
-  - entity: sensor.pelletheatericonbase
+  - entity: sensor.pelletheatersystemtemperatureoutside
     secondary_info: last-updated
     name: Außentemperatur
     type: custom:multiple-entity-row
