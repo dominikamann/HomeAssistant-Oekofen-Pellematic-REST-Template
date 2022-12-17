@@ -1,0 +1,229 @@
+sensor:
+
+  - name: pelletheatericonbase
+    unique_id: sensor.PelletHeater_pelletheatericonbase
+    state: >
+      
+  - name: Pellet Storage Level Max
+    unique_id: sensor.PelletHeater_pellematicheaterstoragefillmax
+    unit_of_measurement: "kg"
+    device_class: weight
+    state_class: measurement
+    state: >
+       {{ state_attr('sensor.PelletHeater', 'pe1')['L_storage_max'] | int }}
+
+  - name: Pellet Storage Level (M)
+    unique_id: sensor.PelletHeater_pellematicheaterstoragefill
+    unit_of_measurement: "kg"
+    device_class: weight
+    state_class: measurement
+    state: >
+       {{ state_attr('sensor.PelletHeater', 'pe1')['L_storage_fill'] | int }}
+       
+  - name: Pellet Storage Level (T)
+    unique_id: sensor.PelletHeater_pellematicheaterstoragefill_T
+    unit_of_measurement: "kg"
+    device_class: weight
+    state_class: total
+    state: >
+       {{ state_attr('sensor.PelletHeater', 'pe1')['L_storage_fill'] | int }}
+       
+  - name: Pellet Storage Level (TI)
+    unique_id: sensor.PelletHeater_pellematicheaterstoragefill_TI
+    unit_of_measurement: "kg"
+    device_class: weight
+    state_class: total_increasing
+    state: >
+       {{ state_attr('sensor.PelletHeater', 'pe1')['L_storage_fill'] | int }}
+       
+  - name: Pellet Usage Yesterday
+    unique_id: sensor.PelletHeater_pellematicheaterstoragefillyesterday
+    unit_of_measurement: "kg"
+    device_class: weight
+    state_class: measurement
+    state: >
+       {{ state_attr('sensor.PelletHeater', 'pe1')['storage_fill_yesterday'] | int }}
+       
+  - name: Pellet Usage Today
+    unique_id: sensor.PelletHeater_pellematicheaterstoragefilltoday
+    unit_of_measurement: "kg"
+    device_class: weight
+    state_class: measurement
+    state: >
+       {{ state_attr('sensor.PelletHeater', 'pe1')['storage_fill_today'] | int }}
+       
+  - name: Pellet Popper Tank (M)
+    unique_id: sensor.PelletHeater_pellematicheaterstoragepopper
+    unit_of_measurement: "kg"
+    device_class: weight
+    state_class: measurement
+    state: >
+      {{ state_attr('sensor.PelletHeater', 'pe1')['L_storage_popper'] | int }}
+    
+  - name: Pellet Popper Tank (T)
+    unique_id: sensor.PelletHeater_pellematicheaterstoragepopper_T
+    unit_of_measurement: "kg"
+    device_class: weight
+    state_class: total
+    state: >
+      {{ state_attr('sensor.PelletHeater', 'pe1')['L_storage_popper'] | int }}
+    
+  - name: Pellet Popper Tank (TI)
+    unique_id: sensor.PelletHeater_pellematicheaterstoragepopper_TI
+    unit_of_measurement: "kg"
+    device_class: weight
+    state_class: total_increasing
+    state: >
+      {{ state_attr('sensor.PelletHeater', 'pe1')['L_storage_popper'] | int }}
+       
+  - name: Outside Temperature
+    unique_id: sensor.PelletHeater_pelletheatersystemtemperatureoutside
+    unit_of_measurement: "°C"
+    device_class: temperature
+    state_class: measurement
+    state: >
+       {{ state_attr('sensor.PelletHeater', 'system')['L_ambient'] | int / 10}}
+ 
+  - name: pelletheaterheatingcircuitflowtemperature
+    unique_id: sensor.PelletHeater_heatingcircuitflowtemperature
+    unit_of_measurement: "°C"
+    device_class: temperature
+    state_class: measurement
+    state: >
+      {{ state_attr('sensor.PelletHeater', 'hk1')['L_flowtemp_act'] | int / 10}}
+
+  - name: pelletheaterheatingcircuitflowtemperaturesoll
+    unique_id: sensor.PelletHeater_heatingcircuitflowtemperaturesoll
+    unit_of_measurement: "°C"
+    device_class: temperature
+    state_class: measurement
+    state: >
+      {{ state_attr('sensor.PelletHeater', 'hk1')['L_flowtemp_set'] | int / 10}}
+
+  - name: pelletheaterbuffertanktemperatureo
+    unique_id: sensor.PelletHeater_pelletheaterbuffertanktemperatureo
+    unit_of_measurement: "°C"
+    device_class: temperature
+    state_class: measurement
+    state: >
+      {{ state_attr('sensor.PelletHeater', 'pu1')['L_tpo_act'] | int / 10}}
+
+  - name: pelletheaterbuffertanktemperatureosoll
+    unique_id: sensor.PelletHeater_pelletheaterbuffertanktemperatureosoll
+    unit_of_measurement: "°C"
+    device_class: temperature
+    state_class: measurement
+    state: >
+      {{ state_attr('sensor.PelletHeater', 'pu1')['L_tpo_set'] | int / 10}}
+
+  - name: pelletheaterbuffertanktemperatureu
+    unique_id: sensor.PelletHeater_pelletheaterbuffertanktemperatureu
+    unit_of_measurement: "°C"
+    device_class: temperature
+    state_class: measurement
+    state: >
+      {{ state_attr('sensor.PelletHeater', 'pu1')['L_tpm_act'] | int / 10}}
+
+  - name: pelletheaterbuffertanktemperatureusoll
+    unique_id: sensor.PelletHeater_pelletheaterbuffertanktemperatureusoll
+    unit_of_measurement: "°C"
+    device_class: temperature
+    state_class: measurement
+    state: >
+      {{ state_attr('sensor.PelletHeater', 'pu1')['L_tpm_set'] | int / 10}}
+
+  - name: pelletheaterhotwatercircuitontemperaturesoll
+    unique_id: sensor.PelletHeater_pelletheaterhotwatercircuitontemperaturesoll
+    unit_of_measurement: "°C"
+    device_class: temperature
+    state_class: measurement
+    state: >
+      {{ state_attr('sensor.PelletHeater', 'ww1')['L_temp_set'] | int / 10}}
+
+  - name: pelletheaterhotwatercircuitontemperature
+    unique_id: sensor.PelletHeater_pelletheaterhotwatercircuitontemperature
+    unit_of_measurement: "°C"
+    device_class: temperature
+    state_class: measurement
+    state: >
+      {{ state_attr('sensor.PelletHeater', 'ww1')['L_ontemp_act'] | int / 10}}
+
+  - name: pelletheaterhotwatercircuitofftemperature
+    unique_id: sensor.PelletHeater_pelletheaterhotwatercircuitofftemperature
+    unit_of_measurement: "°C"
+    device_class: temperature
+    state_class: measurement
+    state: >
+      {{ state_attr('sensor.PelletHeater', 'ww1')['L_offtemp_act'] | int / 10}}
+
+  - name: pellematicheatertemp
+    unique_id: sensor.PelletHeater_pellematicheatertemp
+    unit_of_measurement: "°C"
+    device_class: temperature
+    state_class: measurement
+    state: >
+      {{ state_attr('sensor.PelletHeater', 'pe1')['L_temp_act'] | int / 10}}
+
+  - name: pellematicheatertempsoll
+    unique_id: sensor.PelletHeater_pellematicheatertempsoll
+    unit_of_measurement: "°C"
+    device_class: temperature
+    state_class: measurement
+    state: >
+      {{ state_attr('sensor.PelletHeater', 'pe1')['L_temp_set'] | int / 10}}
+
+  - name: pellematicheatertempflammraum
+    unique_id: sensor.PelletHeater_pellematicheatertempflammraum
+    unit_of_measurement: "°C"
+    device_class: temperature
+    state_class: measurement
+    state: >
+      {{ state_attr('sensor.PelletHeater', 'pe1')['L_frt_temp_act'] | int / 10}}
+
+  - name: pellematicheatertempflammraumsoll
+    unique_id: sensor.PelletHeater_pellematicheatertempflammraumsoll
+    unit_of_measurement: "°C"
+    device_class: temperature
+    state_class: measurement
+    state: >
+      {{ state_attr('sensor.PelletHeater', 'pe1')['L_frt_temp_set'] | int / 10}}
+      
+  - name: pelletheaterheatingcircuitstate
+    unique_id: sensor.PelletHeater_heatingcircuitstate
+    state: >
+      {{ state_attr('sensor.PelletHeater', 'hk1')['L_statetext']}}
+      
+  - name: pelletheaterbuffertankstate
+    unique_id: sensor.PelletHeater_pelletheaterbuffertankstate
+    state: >
+      {{ state_attr('sensor.PelletHeater', 'pu1')['L_statetext']}}
+      
+  - name: pelletheaterhotwatercircuitstate
+    unique_id: sensor.PelletHeater_pelletheaterhotwatercircuitstate
+    state: >
+      {{ state_attr('sensor.PelletHeater', 'ww1')['L_statetext']}}
+      
+  - name: pellematicheaterstatus
+    unique_id: sensor.PelletHeater_pellematicheaterstatus
+    state: >
+      {{ state_attr('sensor.PelletHeater', 'pe1')['L_statetext']}}
+      
+binary_sensor:
+
+  - name: pelletheaterheatingcircuitpumpon
+    unique_id: binary_sensor.PelletHeater_pelletheaterheatingcircuitpumpon
+    device_class: power
+    state: >
+       {{ state_attr('sensor.PelletHeater', 'hk1')['L_pump'] | bool }}
+       
+  - name: pelletheaterbuffertankpumpon
+    unique_id: binary_sensor.PelletHeater_pelletheaterbuffertankpumpon
+    device_class: power
+    state: >
+       {{ state_attr('sensor.PelletHeater', 'pu1')['L_pump'] | bool }}
+       
+  - name: pelletheaterhotwatercircuitpumpon
+    unique_id: binary_sensor.PelletHeater_pelletheaterhotwatercircuitpumpon
+    device_class: power
+    state: >
+       {{ state_attr('sensor.PelletHeater', 'ww1')['L_pump'] | bool }}
