@@ -2,6 +2,7 @@ type: entities
 title: Pellematic Compact
 entities:
   - entity: sensor.pelletheatericonbase
+    icon: mdi:water-boiler
     name: >-
       Pellematic Compact (Max, Aktuell, Zwischenbehälter, Vebraucht
       Heute/Gestern)
@@ -23,6 +24,7 @@ entities:
         name: false
         icon: false
   - entity: sensor.pelletheatericonbase
+    icon: mdi:water-boiler
     name: Pellematic Compact (Kessel/Soll, Flammraum/Soll)
     type: custom:multiple-entity-row
     entities:
@@ -39,6 +41,7 @@ entities:
         name: false
         icon: false
   - entity: sensor.pelletheatericonbase
+    icon: mdi:water-boiler
     name: Warmwasser (Temp-Ein, Temp-Aus, Soll, Pumpe)
     type: custom:multiple-entity-row
     entities:
@@ -51,10 +54,11 @@ entities:
       - entity: sensor.pelletheaterhotwatercircuitontemperaturesoll
         name: false
         icon: false
-      - entity: sensor.pelletheaterhotwatercircuitpumpon
+      - entity: binary_sensor.pelletheaterhotwatercircuitpumpon_2
         name: false
         icon: false
   - entity: sensor.pelletheatericonbase
+    icon: mdi:water-boiler
     name: Puffertank (Oben/Soll, Mitte/Soll, Pumpe)
     type: custom:multiple-entity-row
     entities:
@@ -70,10 +74,11 @@ entities:
       - entity: sensor.pelletheaterbuffertanktemperatureusoll
         name: false
         icon: false
-      - entity: sensor.pelletheaterbuffertankpumpon
+      - entity: binary_sensor.pelletheaterbuffertankpumpon_2
         name: false
         icon: false
   - entity: sensor.pelletheatericonbase
+    icon: mdi:water-boiler
     name: Heizkreislauf (Vorlauftemperatur/Soll, Pumpe)
     type: custom:multiple-entity-row
     entities:
@@ -83,23 +88,28 @@ entities:
       - entity: sensor.pelletheaterheatingcircuitflowtemperaturesoll
         name: false
         icon: false
-      - entity: sensor.pelletheaterheatingcircuitpumpon
+      - entity: binary_sensor.pelletheaterheatingcircuitpumpon_2
         name: false
         icon: false
-  - entity: sensor.pelletheatersystemtemperatureoutside
+  - entity: sensor.outside_temperature
+    icon: mdi:water-boiler
     secondary_info: last-updated
     name: Außentemperatur
     type: custom:multiple-entity-row
   - entity: sensor.pellematicheaterstatus
+    icon: mdi:water-boiler
     name: Pellematic Compact Status
     secondary_info: last-updated
   - entity: sensor.pelletheaterbuffertankstate
+    icon: mdi:water-boiler
     name: Puffertank Status
     secondary_info: last-updated
   - entity: sensor.pelletheaterhotwatercircuitstate
+    icon: mdi:water-boiler
     name: Warmwasser Status
     secondary_info: last-updated
   - entity: sensor.pelletheaterheatingcircuitstate
+    icon: mdi:water-boiler
     name: Heizkreislauf Status
     secondary_info: last-updated
     type: custom:multiple-entity-row
