@@ -1,6 +1,6 @@
   - platform: rest
     name: PelletHeater
-    resource: http://192.168.178.91:4321/8n2L/all
+    resource: http://[IP]:[PORT]/[PASSWORD]/all
     scan_interval: 60
     json_attributes:
       - hk1
