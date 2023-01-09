@@ -1,7 +1,7 @@
 # Home Assistant Ökofen Pellematic Compact REST-Template (Ökofen JSON-Interface)
 
 *************************************
-*** Meanwhile i developed a Home Assistant Integration -> Feel free to use: https://github.com/dominikamann/oekofen-pellematic-compact
+Meanwhile i developed a Home Assistant Integration -> Feel free to use: https://github.com/dominikamann/oekofen-pellematic-compact
 *************************************
 
 A template how to integrate a Ökofen Pellematic Compact via JSON Interface to Home Assistant.
