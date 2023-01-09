@@ -1,5 +1,9 @@
 # Home Assistant Ökofen Pellematic Compact REST-Template (Ökofen JSON-Interface)
 
+############################################
+#### Meanwhile i developed a Home Assistant Integration -> Feel free to use: https://github.com/dominikamann/oekofen-pellematic-compact
+############################################
+
 A template how to integrate a Ökofen Pellematic Compact via JSON Interface to Home Assistant.
 
 Step 1: Go to your Ökofen Pellematic Compact -> Touchscreen -> Open General Settings -> Network Settings -> Scroll down -> Activate JSON Interface
